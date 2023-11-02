@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-0o7xf+y(4wg4y_ugdhu)(#_ahvt+&atd$#cu#9iu)alxxnoivq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'dvds.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-FR'
 
 TIME_ZONE = 'UTC'
 
